@@ -1,0 +1,44 @@
+.menu {
+  background-color: #00172b;
+  height: 70px;
+  padding: 20px 216px 0 216px;
+
+  ul {
+    list-style-type: none;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  li {
+    margin-right: 44px;
+    cursor: pointer;
+
+    button {
+      background-color: transparent;
+      color: white;
+      line-height: normal;
+      border-radius: 20px;
+      padding: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: #0097e3;
+    }
+  }
+}
+
+.intro {
+  background-color: #00172b;
+  height: 210px;
+  padding-left: 216px;
+
+  p {
+    color: #ffffff;
+    font-size: 48px;
+    font-family: 'PT Serif', sans-serif;
+  }
+}

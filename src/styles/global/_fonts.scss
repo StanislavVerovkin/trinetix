@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'DecimaNovaPro';
+  src: url("assets/fonts/DecimaNovaPro.ttf")
+}
+
+@font-face {
+  font-family: 'DecimaNovaProLt';
+  src: url("assets/fonts/DecimaNovaProLt.ttf")
+}
+
+@font-face {
+  font-family: 'DecimaNovaProBold';
+  src: url("assets/fonts/DecimaNovaPro-Bold.ttf")
+}
+
+@font-face {
+  font-family: 'DecimaNovaProLight';
+  src: url("assets/fonts/DecimaNovaProLight.ttf")
+}
+
+body {
+  font-family: 'DecimaNovaPro', sans-serif;
+}
