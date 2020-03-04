@@ -1,12 +1,11 @@
 .menu {
   background-color: #00172b;
   height: 70px;
-  padding: 20px 216px 0 216px;
+  padding: 20px 0 0 0;
 
   ul {
     list-style-type: none;
     color: #ffffff;
-    font-weight: bold;
   }
 
   li {
@@ -34,11 +33,33 @@
 .intro {
   background-color: #00172b;
   height: 210px;
-  padding-left: 216px;
 
   p {
     color: #ffffff;
     font-size: 48px;
     font-family: 'PT Serif', sans-serif;
+  }
+}
+
+.tabs {
+  background-color: #00172b;
+  height: 73px;
+
+  .active {
+    border-bottom: 3px solid #0097e3;
+  }
+
+  a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+
+    &:hover {
+      border-bottom: 3px solid #0097e3;
+    }
   }
 }
