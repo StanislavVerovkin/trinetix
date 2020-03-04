@@ -1,9 +1,33 @@
-.content-intro {
-  padding-top: 65px;
+@import '../../../styles/global/variables';
 
-  h2 {
+.content {
+  text-align: center;
+
+  .content__title {
+    margin-top: 65px;
     font-size: 54px;
     font-family: 'PT Serif', sans-serif;
     color: #105788;
+  }
+
+  .content__title-product {
+    margin-top: 50px;
+    font-size: 36px;
+    color: #00abff;
+  }
+
+  .content__text-product {
+    font-size: 24px;
+    font-family: 'DecimaNovaProLt', sans-serif;
+  }
+
+  .content__main {
+    margin-top: 180px;
+
+    .content__main-block {
+      margin-bottom: 60px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
   }
 }

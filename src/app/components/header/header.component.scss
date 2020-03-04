@@ -1,49 +1,40 @@
-.menu {
+@import '../../../styles/global/variables';
+
+ul, li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-bar {
   background-color: #00172b;
   height: 70px;
-  padding: 20px 0 0 0;
+  padding: 20px 0 20px 0;
+}
 
-  ul {
-    list-style-type: none;
+.menu__item {
+  margin-left: 44px;
+
+  a {
     color: #ffffff;
-  }
-
-  li {
-    margin-right: 44px;
-    cursor: pointer;
-
-    button {
-      background-color: transparent;
-      color: white;
-      line-height: normal;
-      border-radius: 20px;
-      padding: 0;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &:hover {
-      color: #0097e3;
-    }
+    text-decoration: none;
   }
 }
 
-.intro {
-  background-color: #00172b;
-  height: 210px;
+.header {
+    background-color: #00172b;
+    height: 210px;
 
-  p {
-    color: #ffffff;
-    font-size: 48px;
-    font-family: 'PT Serif', sans-serif;
+      p {
+        color: #ffffff;
+        font-size: 48px;
+        font-family: 'PT Serif', sans-serif;
   }
 }
 
 .tabs {
   background-color: #00172b;
-  height: 73px;
+  height: 73px;¬
 
   .active {
     border-bottom: 3px solid #0097e3;
