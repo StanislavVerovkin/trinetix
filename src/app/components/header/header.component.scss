@@ -10,6 +10,18 @@ ul, li {
   background-color: #00172b;
   height: 70px;
   padding: 20px 0 20px 0;
+  border-top: 3px solid #0097e3;
+
+  .contact-btn {
+      border-width: 1px;
+      border-color: rgb(255, 255, 255);
+      background-color: transparent;
+      border-radius: 20px;
+      color: #ffffff;
+      border-style: solid;
+      width: 118px;
+      height: 30px;
+  }
 }
 
 .menu__item {
@@ -52,5 +64,14 @@ ul, li {
     &:hover {
       border-bottom: 3px solid #0097e3;
     }
+  }
+}
+
+
+@media screen and (min-width: 1245px) {
+  .menu-bar,
+  .header,
+  .tabs {
+    padding: 20px 216px 20px 216px;
   }
 }
