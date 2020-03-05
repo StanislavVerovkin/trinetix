@@ -9,7 +9,7 @@ export interface ContentItem {
   image: string,
   title: string,
   text: string
-}
+};
 
 export interface HeaderModel {
   logo: string,
@@ -33,9 +33,9 @@ export interface AddressItem {
   country: string,
   email: string,
   phone: string
-}
+};
 
 export interface SocialItem {
   name: string,
   logo: string
-}
+};
