@@ -1,4 +1,4 @@
-@import '../../../styles/global/variables';
+@import '../../../styles//global/colors';
 
 ul, li {
   display: block;
@@ -7,17 +7,17 @@ ul, li {
 }
 
 .menu-bar {
-  background-color: #00172b;
+  background-color: $mainBackground;
   height: 70px;
   padding: 20px 0 20px 0;
-  border-top: 3px solid #0097e3;
+  border-top: 3px solid $mainColor;
 
   .contact-btn {
       border-width: 1px;
-      border-color: rgb(255, 255, 255);
+      border-color: $whiteColor;
       background-color: transparent;
       border-radius: 20px;
-      color: #ffffff;
+      color: $whiteColor;
       border-style: solid;
       width: 118px;
       height: 30px;
@@ -28,28 +28,27 @@ ul, li {
   margin-left: 44px;
 
   a {
-    color: #ffffff;
+    color: $whiteColor;
     text-decoration: none;
   }
 }
 
 .header {
-    background-color: #00172b;
+    background-color: $mainBackground;
     height: 210px;
 
       p {
-        color: #ffffff;
+        color: $whiteColor;
         font-size: 48px;
         font-family: 'PT Serif', sans-serif;
   }
 }
 
 .tabs {
-  background-color: #00172b;
-  height: 73px;¬
+  background-color: $mainBackground;
 
   .active {
-    border-bottom: 3px solid #0097e3;
+    border-bottom: 3px solid $mainColor;
   }
 
   a {
@@ -62,13 +61,12 @@ ul, li {
     border-bottom: 3px solid transparent;
 
     &:hover {
-      border-bottom: 3px solid #0097e3;
+      border-bottom: 3px solid $mainColor;
     }
   }
 }
 
-
-@media screen and (min-width: 1245px) {
+@media screen and (min-width: 1400px) {
   .menu-bar,
   .header {
     padding: 20px 216px 20px 216px;
@@ -76,5 +74,12 @@ ul, li {
 
   .tabs {
     padding: 0 216px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .menu,
+  .header {
+    display: none !important;
   }
 }

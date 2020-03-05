@@ -1,0 +1,74 @@
+@import '../../../styles//global/colors';
+
+.footer {
+  background-color: $mainBackground;
+  height: auto;
+  border-top: 3px solid $mainColor;
+  margin-top: 60px;
+  font-size: 16px;
+  font-family: 'DecimaNovaProLt', sans-serif;
+
+  ul, li {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .address {
+    color: $whiteColor;
+    margin-top: 37px;
+  }
+
+  .address__email {
+    color: $mainColor;
+  }
+
+  .address__text {
+    line-height: 10px;
+  }
+
+  .footer-bar {
+    margin-top: 35px;
+
+    img {
+      margin-right: 15px;
+    }
+  }
+
+  .footer-bar__title {
+    color: $whiteColor;
+  }
+
+  .footer-menu__item {
+    margin-left: 25px;
+
+    a {
+      color: $whiteColor;
+      text-decoration: none;
+
+      &:hover {
+        color:  $mainColor;
+      }
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .footer {
+    padding: 0 216px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-menu {
+    display: none !important;
+  }
+
+  .footer-bar {
+    flex-direction: column-reverse;
+  }
+}

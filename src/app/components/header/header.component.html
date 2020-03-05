@@ -33,7 +33,7 @@
 <div class="tabs d-flex align-items-end">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xl-12">
+      <div *ngIf="!resize; else another" class="col-xl-12">
         <a href="#" class="active">ALL</a>
         <a href="#">MOBILE APPS</a>
         <a href="#">WEB SERVICES</a>
@@ -41,6 +41,15 @@
         <a href="#">UX/UI DESIGN</a>
         <a href="#">DEVELOPMENT</a>
       </div>
+      <ng-template #another>
+        <div class="col-xl-12 p-0">
+          <a href="#" class="active">ALL</a>
+          <a href="#">MOBILE</a>
+          <a href="#">WEB</a>
+          <a href="#">AR</a>
+          <a href="#">U</a>
+        </div>
+      </ng-template>
     </div>
   </div>
 </div>
