@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MockDataService } from 'src/app/services/mock-data.service';
 
 @Component({
   selector: 'app-content',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public mockDataService: MockDataService
+  ) { }
 
   ngOnInit() {
   }

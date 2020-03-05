@@ -2,15 +2,12 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-xl-2 col-md-2">
-        <img class="logo" src="../../../assets/images/logo.png">
+        <img class="logo" [src]="mockDataService.headerData.logo">
       </div>
       <div class="col-xl-10 col-md-10 align-self-center">
         <nav>
           <ul class="menu d-flex justify-content-end align-items-end">
-            <li class="menu__item"><a href="#">CASE STUDIES</a></li>
-            <li class="menu__item"><a href="#">SERVICES</a></li>
-            <li class="menu__item"><a href="#">EXPERTISE</a></li>
-            <li class="menu__item"><a href="#">ABOUT</a></li>
+            <li *ngFor="let menuItem of mockDataService.headerData.headerMenu" class="menu__item"><a href="#">{{menuItem}}</a></li>
             <li class="menu__item"><button class="contact-btn">CONTACT US</button></li>
           </ul>
         </nav>
@@ -23,8 +20,7 @@
     <div class="row">
       <div class="col-xl-12">
         <p>
-          We work with forward businesses to create
-          new digital platforms, products and services.
+          {{mockDataService.headerData.intro}}
         </p>
       </div>
     </div>
@@ -34,20 +30,11 @@
   <div class="container-fluid">
     <div class="row">
       <div *ngIf="!resize; else another" class="col-xl-12">
-        <a href="#" class="active">ALL</a>
-        <a href="#">MOBILE APPS</a>
-        <a href="#">WEB SERVICES</a>
-        <a href="#">AUGMENTED REALITY</a>
-        <a href="#">UX/UI DESIGN</a>
-        <a href="#">DEVELOPMENT</a>
+        <a *ngFor="let tabItem of mockDataService.headerData.headerTabs" href="#">{{tabItem}}</a>
       </div>
       <ng-template #another>
         <div class="col-xl-12 p-0">
-          <a href="#" class="active">ALL</a>
-          <a href="#">MOBILE</a>
-          <a href="#">WEB</a>
-          <a href="#">AR</a>
-          <a href="#">U</a>
+          <a *ngFor="let shortTabItem of mockDataService.headerData.headerShortTabs" href="#">{{shortTabItem}}</a>
         </div>
       </ng-template>
     </div>

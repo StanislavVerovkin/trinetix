@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import { MockDataService } from 'src/app/services/mock-data.service';
 
 @Component({
   selector: 'app-header',
@@ -20,7 +21,9 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  constructor() {
+  constructor(
+    public mockDataService: MockDataService
+  ) {
   }
 
   ngOnInit() {
