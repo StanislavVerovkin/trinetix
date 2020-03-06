@@ -1,58 +1,58 @@
 <header class="menu-bar">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xl-2 col-md-2">
-        <img class="logo" [src]="mockDataService.headerData.logo">
-      </div>
-      <div class="col-xl-10 col-md-10 align-self-center">
-        <nav>
-          <ul class="menu d-flex justify-content-end align-items-center">
-            <li
-              *ngFor="let menuItem of mockDataService.headerData.headerMenu"
-              class="menu__item">
-              <a href="#">{{menuItem}}</a>
-            </li>
-            <li class="menu__item">
-              <button class="contact-btn">CONTACT US</button>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-2 col-md-2">
+                <img class="logo" [src]="mockDataService.headerData.logo">
+            </div>
+            <div class="col-xl-10 col-md-10 align-self-center">
+                <nav>
+                    <ul class="menu d-flex justify-content-end align-items-center">
+                        <li
+                                *ngFor="let menuItem of mockDataService.headerData.headerMenu"
+                                class="menu__item">
+                            <a href="#">{{menuItem}}</a>
+                        </li>
+                        <li class="menu__item">
+                            <button class="contact-btn">CONTACT US</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
-  </div>
 </header>
 <div class="header d-flex align-items-center">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xl-12">
-        <p>
-          {{mockDataService.headerData.intro}}
-        </p>
-      </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <p>
+                    {{mockDataService.headerData.intro}}
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 <div class="tabs d-flex align-items-end">
-  <div class="container-fluid">
-    <div class="row">
-      <div *ngIf="!resize; else another" class="col-xl-12">
-        <a
-          *ngFor="let tabItem of mockDataService.headerData.headerTabs"
-          href="#"
-        >
-          {{tabItem}}
-        </a>
-      </div>
-      <ng-template #another>
-        <div class="col-xl-12 p-0">
-          <a
-            *ngFor="let shortTabItem of mockDataService.headerData.headerShortTabs"
-            href="#"
-          >
-            {{shortTabItem}}
-          </a>
+    <div class="container-fluid">
+        <div class="row">
+            <div *ngIf="!resize; else another" class="col-xl-12">
+                <a
+                        *ngFor="let tabItem of mockDataService.headerData.headerTabs"
+                        href="#"
+                >
+                    {{tabItem}}
+                </a>
+            </div>
+            <ng-template #another>
+                <div class="col-xl-12 p-0">
+                    <a
+                            *ngFor="let shortTabItem of mockDataService.headerData.headerShortTabs"
+                            href="#"
+                    >
+                        {{shortTabItem}}
+                    </a>
+                </div>
+            </ng-template>
         </div>
-      </ng-template>
     </div>
-  </div>
 </div>
