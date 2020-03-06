@@ -1,4 +1,4 @@
-@import '../../../styles//global/colors';
+@import '../../../styles/global/colors';
 
 .footer {
   background-color: $mainBackground;
@@ -51,7 +51,7 @@
       text-decoration: none;
 
       &:hover {
-        color:  $mainColor;
+        color: $mainColor;
       }
     }
 

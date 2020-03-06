@@ -8,7 +8,9 @@
           <p>{{mockDataService?.footerData?.headquarters?.location}}</p>
         </span>
       </div>
-      <div *ngFor="let addressItem of mockDataService?.footerData?.addresses" class="col-xl-3 col-md-3 col-sm-3 col-6">
+      <div
+        *ngFor="let addressItem of mockDataService?.footerData?.addresses"
+        class="col-xl-3 col-md-3 col-sm-3 col-6">
         <p>{{addressItem?.country}}:</p>
         <span class="address__text">
           <p class="address__email">{{addressItem?.email}}</p>
@@ -25,13 +27,19 @@
       <div class="col-xl-6 col-md-6">
         <nav>
           <ul class="footer-menu d-flex">
-            <li *ngFor="let menuItem of mockDataService?.footerData?.menu" class="footer-menu__item"><a href="#">{{menuItem}}</a>
+            <li
+              *ngFor="let menuItem of mockDataService?.footerData?.menu"
+              class="footer-menu__item">
+              <a href="#">{{menuItem}}</a>
             </li>
           </ul>
         </nav>
       </div>
       <div class="col-xl-3 col-md-3">
-        <img *ngFor="let socialItem of mockDataService?.footerData?.social" [src]="socialItem?.logo" [alt]="socialItem?.name">
+        <img *ngFor="let socialItem of mockDataService?.footerData?.social"
+             [src]="socialItem?.logo"
+             [alt]="socialItem?.name"
+        >
       </div>
     </div>
   </div>

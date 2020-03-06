@@ -6,9 +6,15 @@
       </div>
       <div class="col-xl-10 col-md-10 align-self-center">
         <nav>
-          <ul class="menu d-flex justify-content-end align-items-end">
-            <li *ngFor="let menuItem of mockDataService.headerData.headerMenu" class="menu__item"><a href="#">{{menuItem}}</a></li>
-            <li class="menu__item"><button class="contact-btn">CONTACT US</button></li>
+          <ul class="menu d-flex justify-content-end align-items-center">
+            <li
+              *ngFor="let menuItem of mockDataService.headerData.headerMenu"
+              class="menu__item">
+              <a href="#">{{menuItem}}</a>
+            </li>
+            <li class="menu__item">
+              <button class="contact-btn">CONTACT US</button>
+            </li>
           </ul>
         </nav>
       </div>
@@ -30,11 +36,21 @@
   <div class="container-fluid">
     <div class="row">
       <div *ngIf="!resize; else another" class="col-xl-12">
-        <a *ngFor="let tabItem of mockDataService.headerData.headerTabs" href="#">{{tabItem}}</a>
+        <a
+          *ngFor="let tabItem of mockDataService.headerData.headerTabs"
+          href="#"
+        >
+          {{tabItem}}
+        </a>
       </div>
       <ng-template #another>
         <div class="col-xl-12 p-0">
-          <a *ngFor="let shortTabItem of mockDataService.headerData.headerShortTabs" href="#">{{shortTabItem}}</a>
+          <a
+            *ngFor="let shortTabItem of mockDataService.headerData.headerShortTabs"
+            href="#"
+          >
+            {{shortTabItem}}
+          </a>
         </div>
       </ng-template>
     </div>
