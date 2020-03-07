@@ -11,7 +11,7 @@ export class ContentComponent implements OnInit {
 
   @HostListener('window:resize', [ '$event' ])
   onChange(event?: any) {
-    this.changeDomService.changeFooterTextFunc(event, 400);
+    this.changeDomService.changeFooterTextFunc(event, 500);
   }
 
   constructor(

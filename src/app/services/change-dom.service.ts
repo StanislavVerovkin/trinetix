@@ -9,18 +9,18 @@ export class ChangeDomService {
   changeFooterText = false;
 
   changeTabsFunc(event, px: number) {
-    if (event && event.target.innerWidth <= px) {
-      this.changeTabs = true;
-    } else {
-      this.changeTabs = window.innerWidth <= px;
-    }
+    this.changeTabs = this._change(event, px);
   }
 
   changeFooterTextFunc(event, px: number) {
+    this.changeFooterText = this._change(event, px);
+  }
+
+  private _change(event, px) {
     if (event && event.target.innerWidth <= px) {
-      this.changeFooterText = true;
+      return true;
     } else {
-      this.changeFooterText = window.innerWidth <= px;
+      return window.innerWidth <= px;
     }
   }
 }
