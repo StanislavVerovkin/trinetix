@@ -1,46 +1,46 @@
 <footer class="footer">
-    <div class="container-fluid">
-        <div class="row address">
-            <div class="col-xl-3 col-md-3 col-sm-12">
-                <p>Headquarters:</p>
-                <div class="address__text">
-                    <p>{{mockDataService?.footerData?.headquarters?.street}}</p>
-                    <p>{{mockDataService?.footerData?.headquarters?.location}}</p>
-                </div>
-            </div>
-            <div
-                    *ngFor="let addressItem of mockDataService?.footerData?.addresses"
-                    class="col-xl-3 col-md-3 col-sm-3 col-6">
-                <p>{{addressItem?.country}}:</p>
-                <div class="address__text">
-                    <p class="address__email">{{addressItem?.email}}</p>
-                    <p>{{addressItem?.phone}}</p>
-                </div>
-            </div>
+  <div class="container-fluid">
+    <div class="row address">
+      <div class="col-xl-3 col-md-3 col-sm-12">
+        <p>Headquarters:</p>
+        <div class="address__text">
+          <p>{{mockDataService?.footerData?.headquarters?.street}}</p>
+          <p>{{mockDataService?.footerData?.headquarters?.location}}</p>
         </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row footer-bar d-flex align-items-baseline">
-            <div class="col-xl-3 col-md-3">
-                <p class="footer-bar__title">© 2010-2015 Trinetix LLC</p>
-            </div>
-            <div class="col-xl-6 col-md-6">
-                <nav>
-                    <ul class="footer-menu d-flex">
-                        <li
-                                *ngFor="let menuItem of mockDataService?.footerData?.menu"
-                                class="footer-menu__item">
-                            <a href="#">{{menuItem}}</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-xl-3 col-md-3">
-                <img *ngFor="let socialItem of mockDataService?.footerData?.social"
-                     [src]="socialItem?.logo"
-                     [alt]="socialItem?.name"
-                >
-            </div>
+      </div>
+      <div
+        *ngFor="let addressItem of mockDataService?.footerData?.addresses"
+        class="col-xl-3 col-md-3 col-sm-3 col-6">
+        <p>{{addressItem?.country}}:</p>
+        <div class="address__text">
+          <p class="address__email">{{addressItem?.email}}</p>
+          <p>{{addressItem?.phone}}</p>
         </div>
+      </div>
     </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row footer-bar d-flex align-items-baseline">
+      <div class="col-xl-3 col-md-3">
+        <p class="footer-bar__title">© 2010-2015 Trinetix LLC</p>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <nav>
+          <ul class="footer-menu d-flex">
+            <li
+              *ngFor="let menuItem of mockDataService?.footerData?.menu"
+              class="footer-menu__item">
+              <a href="#">{{menuItem}}</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-xl-3 col-md-3">
+        <img *ngFor="let socialItem of mockDataService?.footerData?.social"
+             [src]="socialItem?.logo"
+             [alt]="socialItem?.name"
+        >
+      </div>
+    </div>
+  </div>
 </footer>

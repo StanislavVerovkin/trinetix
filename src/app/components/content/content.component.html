@@ -1,40 +1,48 @@
 <section class="content">
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-xl-10">
-                <h2 class="content__title">
-                    {{mockDataService?.contentData?.contentTitle}}
-                </h2>
-                <p class="content__text">
-                    {{mockDataService?.contentData?.contentText}}
-                </p>
-            </div>
-        </div>
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-xl-11">
+        <h2 class="content__title">
+          {{mockDataService?.contentData?.contentTitle}}
+        </h2>
+        <p class="content__text">
+          {{mockDataService?.contentData?.contentText}}
+        </p>
+      </div>
     </div>
-    <div class="container-fluid">
-        <div class="row content__main justify-content-around align-items-end">
-            <div *ngFor="let contentItem of mockDataService?.contentData?.content"
-                 class="col-xl-6 col-md-6 content__main-block">
-                <img [src]="contentItem?.image">
-                <h3 class="content__title-product">{{contentItem?.title}}</h3>
-                <p class="content__text-product">
-                    {{contentItem?.text}}
-                </p>
-                <button class="learn-more-btn">Learn More</button>
-            </div>
-        </div>
+  </div>
+  <div class="stripe"></div>
+  <div class="container-fluid">
+    <div class="row content__main justify-content-around align-items-end">
+      <div *ngFor="let contentItem of mockDataService?.contentData?.content"
+           class="col-xl-6 col-md-6 content__main-block">
+        <img [src]="contentItem?.image">
+        <h3 class="content__title-product">{{contentItem?.title}}</h3>
+        <p class="content__text-product">
+          {{contentItem?.text}}
+        </p>
+        <button class="learn-more-btn">Learn More</button>
+      </div>
     </div>
-    <hr>
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-xl-11">
-                <div class="content__footer-text">
-                    <p>We enjoy what we do.</p>
-                    <p>Working with smart people at great projects.</p>
-                    <p>Contact us if you want to work with us.</p>
-                </div>
-                <button class="content__footer-btn">Contact Us</button>
-            </div>
+  </div>
+  <hr>
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-xl-7 col-md-8">
+        <div class="content__footer-text">
+          <p *ngIf="!changeDomService.changeFooterText; else another">We enjoy what we do.
+            Working with smart people at great projects.
+            Contact us if you want to work with us.
+          </p>
+          <ng-template #another>
+            <p class="content__footer-another-text">
+              We enjoy working with smart people on challenging tasks and deliver great products. Let's team up to
+              create something worth the effort.
+            </p>
+          </ng-template>
         </div>
+        <button class="content__footer-btn">Contact Us</button>
+      </div>
     </div>
+  </div>
 </section>

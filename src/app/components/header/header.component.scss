@@ -6,6 +6,15 @@ ul, li {
   padding: 0;
 }
 
+.burger__menu {
+  .burger__menu-item {
+    width: 35px;
+    height: 3px;
+    background-color: $whiteColor;
+    margin: 8px 0;
+  }
+}
+
 .menu-bar {
   background-color: $mainBackground;
   height: 70px;
@@ -59,7 +68,7 @@ ul, li {
     display: block;
     color: #ffffff;
     text-align: center;
-    padding: 14px 20px;
+    padding: 14px 19px;
     text-decoration: none;
     border-bottom: 3px solid transparent;
 
@@ -77,6 +86,12 @@ ul, li {
 
   .tabs {
     padding: 0 216px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .burger__menu {
+    display: none;
   }
 }
 
